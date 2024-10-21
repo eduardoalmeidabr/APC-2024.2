@@ -1,0 +1,26 @@
+algoritmo ComissaoSobreVendas;
+// Síntese
+//  Objetivo:   Tendo como entrada o total vendido por um funcionário no mês de agosto, faça um algoritmo 
+//              que mostre a sua comissão e salário bruto neste mês, sabendo que o seu salário base 
+//              é R$1.200,00 e sua comissão é de 10% sobre o total vendido. 
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+	real totalVendas, salarioBase, comissao, valorComissao, salarioBruto;
+
+	// Instruções
+	salarioBase = 1200.00;
+	comissao = 0.10;
+	
+	escreva("Digite o valor do total de vendas, em R$: ");
+	leia(totalVendas);
+
+	valorComissao = totalVendas * comissao;
+	salarioBruto = salarioBase + valorComissao;
+
+	escreva("O valor da sua comissão de 10% sobre as vendas é de R$ ", valorComissao, " e o seu salário bruto é R$ ", salarioBruto);
+
+fimPrincipal

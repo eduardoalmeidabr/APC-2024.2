@@ -1,0 +1,28 @@
+algoritmo SwapValores;
+// Síntese
+//  Objetivo:  Leia dois valores A e B e depois coloque em A o valor lido em B e em B 
+//             o valor lido em A e mostre os novos valores de A e B. 
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+	real a, b, tempa, tempb;
+	
+	// Instruções
+	escreva("Digite o primeiro valor: ");
+	leia(a);
+
+	escreva("Digite o segundo valor: ");
+	leia(b);
+
+	tempa = a;
+	tempb = b;
+	
+	a = tempb;
+	b = tempa;
+
+	escreva("Os valores iniciais foram (a) ", tempa, " e (b) ", tempb, ". Depois da troca: (a) ", a, " e (b) ", b);
+
+fimPrincipal

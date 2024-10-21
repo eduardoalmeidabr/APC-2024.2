@@ -1,0 +1,52 @@
+algoritmo Aritmetica;
+// Síntese
+//  Objetivo:  Faça um algoritmo que receba dois números e ao final mostre a 
+//             soma, subtração, multiplicação e a divisão dos números lidos.
+//  Entrada : Dois números reais num1 e num2 e uma operação aritmética (adição, subtração, multiplicação e divisão)
+//  Saída   : Resultado da operação escolhida (soma, diferença, produto ou quociente) entre os dois números num1 e num2
+
+
+principal
+    // TODO Incluir tratamento de erros na inicialização de variáveis e na divisão por zero
+    
+	// Declarações
+	real num1, num2, resultado;
+	caracter operacao;
+	texto nomeOperacao;
+
+	// Instruções
+	escreva("Digite o primeiro número: ");
+	leia(num1);
+
+	escreva("Digite o segundo número: ");
+	leia(num2);
+
+	escreva("Escolha uma operação [+, -, *, /]: ");
+	leiaCaracter(operacao);
+
+	escolha(operacao)
+	caso '+'
+		resultado = num1 + num2;
+		nomeOperacao = "adição";
+		interrompa;
+	caso '-'
+		resultado = num1 - num2;
+		nomeOperacao = "subtração";
+		interrompa;
+	caso '*'
+		resultado = num1 * num2;
+		nomeOperacao = "multiplicação";
+		interrompa;
+	caso '/'   
+		resultado = num1 / num2;
+		nomeOperacao = "divisão";
+		interrompa;
+	outroCaso
+	    escreva("Nenhuma operação válida foi informada pelo usuário.");
+	fimEscolha
+
+	limpaTela();
+
+	escreva("O resultado da ", nomeOperacao, " dos números ", num1, " e ", num2, " é ", resultado);
+	
+fimPrincipal

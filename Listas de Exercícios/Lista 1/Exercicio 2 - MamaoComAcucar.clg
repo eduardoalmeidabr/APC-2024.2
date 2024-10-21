@@ -1,0 +1,26 @@
+algoritmo MamaoComAcucar;
+// Síntese
+//  Objetivo:  A Loja Mamão com Açúcar está vendendo seus produtos com 5 prestações sem juros. 
+//             Faça um algoritmo que receba um valor de uma compra e mostre o valor das prestações. 
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+	real valorCompra, valorPrestacoes;
+	inteiro quantPrestacoes;
+	
+	// Instruções
+	escreva("Qual o valor da compra? ");
+	leia(valorCompra);
+
+	// Quantidade de prestações
+	quantPrestacoes = 5;
+
+	// Cálculo do valor das prestações
+	valorPrestacoes = valorCompra / quantPrestacoes;
+
+	escreva("O valor das prestações é R$ ", valorPrestacoes);
+
+fimPrincipal

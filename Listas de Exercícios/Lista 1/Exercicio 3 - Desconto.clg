@@ -1,0 +1,22 @@
+algoritmo Desconto;
+// Síntese
+//  Objetivo:  Crie um algoritmo para informar o valor de venda de um produto, 
+//             calcular um desconto de 15% e imprimir na tela o valor com o referido desconto. 
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+	real precoProduto, percentualDesconto;
+	
+	// Instruções
+	escreva("Digite o preço do produto: ");
+	leia(precoProduto);
+
+	// Percentual de desconto
+	percentualDesconto = 0.15;
+
+	escreva("O valor do produto com o desconto de ", percentualDesconto * 100, "% é de R$ ", precoProduto * (1 - percentualDesconto));
+
+fimPrincipal

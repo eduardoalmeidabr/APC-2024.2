@@ -1,0 +1,27 @@
+algoritmo JurosSimples;
+// Síntese
+//  Objetivo:  Faça um algoritmo que receba um valor que foi depositado e exiba o valor 
+//             com rendimento simples após 3 meses. Considere fixo o juro da poupança em 0,70% a. m. 
+//  Entrada : Valor do principal e taxa de jutos, i, e o prazo, n.
+//  Saída   : Valor futuro do investimento
+
+
+principal
+	// Declarações
+	real valorPrincipal, i, juros, valorFuturo;
+	inteiro n;
+
+	// Instruções
+	i = 0.70 / 100;
+	n = 3;
+
+	escreva("Digite o valor que deseja investir: ");
+	leia(valorPrincipal);
+
+	juros = valorPrincipal * i * n;
+
+	valorFuturo = valorPrincipal + juros;
+
+	escreva("O valor futuro do investimento aplicado a taxa de ", i * 100, "% a.m. durante ", n, " meses é de R$ ", valorFuturo);
+	
+fimPrincipal

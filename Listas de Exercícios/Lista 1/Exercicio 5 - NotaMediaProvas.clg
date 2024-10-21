@@ -1,0 +1,30 @@
+algoritmo NotaMediaProvas;
+// Síntese
+//  Objetivo:  Escrever um algoritmo que leia de um aluno, o nome e as notas das três provas que ele obteve no semestre. 
+//             No final informar o nome do aluno e a sua média (aritmética). 
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+	texto nomeAluno;
+	real nota1, nota2, nota3, media;
+
+	// Instruções
+	escreva("Digite seu nome: ");
+	leia(nomeAluno);
+	
+	escreva("Digite a primeira nota: ");
+	leia(nota1);
+
+	escreva("Digite a segunda nota: ");
+	leia(nota2);
+
+	escreva("Digite a terceira nota: ");
+	leia(nota3);
+
+	media = (nota1 + nota2 + nota3) / 3;
+
+	escreva(maiusculo(nomeAluno), " sua média foi ", media:2);
+fimPrincipal

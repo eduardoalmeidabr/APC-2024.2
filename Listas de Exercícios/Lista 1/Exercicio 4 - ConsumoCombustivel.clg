@@ -1,0 +1,27 @@
+algoritmo ConsumoCombustivel;
+// Síntese
+//  Objetivo:  Escrever um algoritmo para determinar o consumo médio de um automóvel sendo 
+//             fornecidos a distância total percorrida pelo automóvel e o total de combustível gasto. 
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+	real distanciaTotal, combustivelGasto, consumoMedio, distanciaPorLitro;
+
+	// Instruções
+	escreva("Informe a distância total percorrida pelo veículo, em km: ");
+	leia(distanciaTotal);
+
+	escreva("Informe o total de combustível, em litros, consumido no percurso: ");
+	leia(combustivelGasto);
+
+	consumoMedio = combustivelGasto / distanciaTotal;
+	distanciaPorLitro = distanciaTotal / combustivelGasto;
+
+	limpaTela();
+
+	escreva("O consumo médio de combustível foi ", consumoMedio, " l/km. Isto é, seu veículo faz uma média de ", distanciaPorLitro, " km/l.");
+
+fimPrincipal
