@@ -1,0 +1,30 @@
+algoritmo CotacaoDolar;
+// Síntese
+//  Objetivo:  Elaborar um algoritmo que efetue a apresentação do valor da conversão em real (R$) de um valor
+//             lido em dólar (US$). O algoritmo deverá solicitar o valor da cotação do dólar e também a
+//             quantidade de dólares disponíveis com o usuário.
+//  Entrada :  Cotação do dólar (cotacaodolar) e quantia, em dólares, com o usuário
+//  Saída   :  Valor em reais da quantidade de dólares com o usuário
+
+
+principal
+	// Declarações
+	real cotacaoDolar, quantiaDolares, quantiaReais;
+
+	// Instruções
+	escreva("Digite a cotação do dólar (US$) em reais (R$): ");
+	leia(cotacaoDolar);
+
+	limpaTela();
+
+	escreva("Digite a quantia, em dólares, que deseja converter para reais: ");
+	leia(quantiaDolares);
+
+	quantiaReais = quantiaDolares * cotacaoDolar;
+
+	limpaTela();
+
+	escreval("O valor de US$ ", quantiaDolares::2, " é o equivalente a R$ ", quantiaReais::2, ".");
+	escreva("A cotação utilizada foi de US$ 1,00 para R$ ", cotacaoDolar::2, ".");
+
+fimPrincipal

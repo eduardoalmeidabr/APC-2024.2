@@ -1,0 +1,46 @@
+algoritmo NumeroExtenso;
+// Síntese
+//  Objetivo:  Faça um algoritmo que leia um número de 1 a 5 e escreva por extenso. Caso o usuário digite um
+//             número que não esteja neste intervalo, exibir mensagem: número inválido.
+//  Entrada : Número entre 1 e 5
+//  Saída   : Número por extenso
+
+
+principal
+	// Declarações
+	texto extenso;
+	inteiro numero;
+
+	// Instruções
+	escreva("Digite um número entre 1 e 5: ");
+	leia(numero);
+
+	extenso = "";
+
+	se (numero < 1 e numero > 5) entao
+	    escreva("Número inválido");
+	senao
+	    escolha(numero)
+	        caso 1
+	            extenso = "um";
+	            interrompa;
+	        caso 2
+	            extenso = "dois";
+	            interrompa;
+	        caso 3
+	            extenso = "três";
+	            interrompa;
+	        caso 4
+	            extenso = "quatro";
+	            interrompa;
+	        caso 5
+	            extenso = "cinco";
+	            interrompa;
+	        outroCaso
+	            escreva("Número inválido");
+	    fimEscolha
+
+	    escreva(extenso);
+	fimSe
+
+fimPrincipal

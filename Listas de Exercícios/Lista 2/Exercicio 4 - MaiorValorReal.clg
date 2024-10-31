@@ -1,0 +1,34 @@
+algoritmo MaiorValorReal;
+// Síntese
+//  Objetivo:  Faça um algoritmo que leia dois números e identifique se são iguais ou diferentes. Caso eles sejam
+//             iguais imprima uma mensagem dizendo que eles são iguais. Caso sejam diferentes, informe qual
+//             número é o maior, e uma mensagem que são diferentes.
+//  Entrada :  Dois números reais
+//  Saída   :  Mostrar o maior número e uma mensagem informando que são diferentes OU mostrar uma mensagem informando que são iguais
+
+
+principal
+	// Declarações
+	real primeiroValor, segundoValor;
+
+	// Instruções
+	escreva("Digite o primeiro valor: ");
+	leia(primeiroValor);
+
+	escreva("Digite o segundo valor: ");
+	leia(segundoValor);
+
+	limpaTela();
+
+	se (primeiroValor == segundoValor) entao
+	    escreva("Os valores informados são iguais.");
+	senao
+	    escreval("Os valores são diferentes.");
+	    se (primeiroValor > segundoValor) entao
+	       escreva("O maior valor informado foi ", primeiroValor, ".");
+	    senao
+	       escreva("O maior valor informado foi ", segundoValor, ".");
+	    fimSe
+	fimSe
+
+fimPrincipal

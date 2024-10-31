@@ -1,0 +1,58 @@
+algoritmo OrdenaDecrescente;
+// Síntese
+//  Objetivo:  Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem decrescente.
+//  Entrada :  Três valores inteiros e diferentes
+//  Saída   :  Exibir os números em ordem decrescente
+
+
+principal
+	// Declarações
+	inteiro a, b, c, maior, meio, menor;
+
+	// Instruções
+	// Leitura dos três valores inteiros e diferentes
+	escreva("Digite o primeiro valor inteiro: ");
+	leia(a);
+
+	escreva("Digite o segundo valor inteiro (diferente do primeiro): ");
+	leia(b);
+
+	escreva("Digite o terceiro valor inteiro (diferente dos anteriores): ");
+	leia(c);
+
+	// Ordenação dos valores em ordem decrescente
+	se (a > b e a > c) entao
+		maior = a;
+		se (b > c) entao
+			meio = b;
+			menor = c;
+		senao
+			meio = c;
+			menor = b;
+		fimSe
+	senao
+		se (b > a e b > c) entao
+			maior = b;
+			se (a > c) entao
+				meio = a;
+				menor = c;
+			senao
+				meio = c;
+				menor = a;
+			fimSe
+		senao
+			maior = c;
+			se (a > b) entao
+				meio = a;
+				menor = b;
+			senao
+				meio = b;
+				menor = a;
+			fimSe
+		fimSe
+	fimSe
+
+	// Exibição dos valores em ordem decrescente
+	escreva("Os valores em ordem decrescente são: ", maior, ", ", meio, ", ", menor);
+
+fimPrincipal

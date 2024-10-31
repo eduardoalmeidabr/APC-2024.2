@@ -1,0 +1,22 @@
+algoritmo IntervaloNumerico;
+// Síntese
+//  Objetivo:  Faça um algoritmo que receba um número e diga se este número está ou não no intervalo 100 e
+//             200 (inclusive).
+//  Entrada :  Um número real
+//  Saída   :  Informar ao usuário se o número informado está no intervalo [100, 200]
+
+
+principal
+	// Declarações
+	real valorNumerico;
+
+	// Instruções
+	escreva("Digite um valor númerico: ");
+	leia(valorNumerico);
+	
+	se (valorNumerico >= 100 e valorNumerico <= 200) entao
+	    escreva("O valor está no intervalo fechado [100, 200].");
+	senao
+	    escreva("O valor não está no intervalo fechado.");
+	fimSe
+fimPrincipal

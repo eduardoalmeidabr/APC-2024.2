@@ -1,0 +1,44 @@
+algoritmo MencaoEscolar;
+// Síntese
+//  Objetivo:  Escrever um algoritmo que leia o nome e as três notas obtidas por um aluno durante o semestre.
+//             Calcular a sua média (aritmética), informar o nome e sua menção aprovado (média >= 7)
+//             Reprovado (media <= 5) e Recuperação (media entre 5.1 a 6.9).
+//  Entrada :  Nome do aluno, 3 notas do semestre
+//  Saída   :  Nome do aluno, média aritmética das notas e menção (aprovado, recuperação, ou reprovado)
+
+
+principal
+	// Declarações
+	texto nomeAluno, mencao;
+	real nota1, nota2, nota3, media;
+
+	// Instruções
+	escreva("Digite o nome do aluno(a): ");
+	leia(nomeAluno);
+
+	escreva("Digite a primeira nota do aluno(a): ");
+	leia(nota1);
+
+	escreva("Digite a segunda nota do aluno(a): ");
+	leia(nota2);
+
+	escreva("Digite a terceira nota do aluno(a): ");
+	leia(nota3);
+
+	media = (nota1 + nota2 + nota3) / 3;
+
+	se (media >= 7) entao
+	   mencao =  "foi aprovado.";
+	senao
+	    se (media <= 5) entao
+	        mencao = "foi reprovado.";
+	    senao
+	        mencao = "está de recuperação.";
+	    fimSe
+	fimSe
+
+	limpaTela();
+
+	escreva(nomeAluno, " teve média igual a ", media::2, " no semestre, portanto, ", mencao);
+
+fimPrincipal

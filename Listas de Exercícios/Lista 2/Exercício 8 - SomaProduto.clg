@@ -1,0 +1,29 @@
+algoritmo SomaProduto;
+// Síntese
+//  Objetivo:  Faça um algoritmo que leia dois valores inteiros A e B se os valores forem iguais deverá se somar
+//             os dois, caso contrário multiplique A por B. Ao final de qualquer um dos cálculos deve-se atribuir
+//             o resultado para uma variável C e imprimir seu conteúdo na tela.
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+	inteiro A, B, C;
+
+	// Instruções
+	escreva("Digite o primeiro valor, A: ");
+	leia(A);
+
+	escreva("Digite o segundo valor, B: ");
+	leia(B);
+
+	se (A == B) entao
+	    C = A + B;
+	senao
+	    C = A * B;
+	fimSe
+
+	escreva("O valor de C é ", C);
+
+fimPrincipal

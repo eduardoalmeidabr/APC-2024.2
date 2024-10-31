@@ -1,0 +1,33 @@
+algoritmo MaiorInteiro;
+// Síntese
+//  Objetivo:  Escrever um algoritmo que leia dois valores inteiro distintos e informe qual é o maior.
+//  Entrada :  Dois valores inteiros distintos
+//  Saída   :  Maior valor informado
+
+
+principal
+	// Declarações
+	inteiro primeiroValor, segundoValor, maiorValor;
+
+	// Instruções
+	escreva("Digite o primeiro número inteiro: ");
+	leia(primeiroValor);
+
+	escreva("Digite o segundo número inteiro: ");
+	leia(segundoValor);
+
+	se (primeiroValor == segundoValor) entao
+		escreva("Os números devem ser diferentes.");
+	senao
+		se (primeiroValor > segundoValor) entao
+			maiorValor= primeiroValor;
+		senao
+			maiorValor = segundoValor;
+		fimSe
+		
+		limpaTela();
+
+		escreva("O maior númeor inteiro entre os números informados é ", maiorValor, ".");
+	fimSe
+fimPrincipal
+

@@ -1,0 +1,70 @@
+algoritmo ParceladoOuAVista;
+// Síntese
+//  Objetivo:  Elabore um algoritmo para cálculo a ser pago por um produto, considerando o preço normal de
+// etiqueta e a escolha da condição de pagamento. Utilize os códigos da tabela a seguir para ler qual
+// a condição de pagamento escolhida e efetuar o cálculo adequado.
+// Código Condição de pagamento:
+// 1- À vista em dinheiro, recebe 10% de desconto;
+// 2- À vista no cartão de crédito, recebe 5% de desconto;
+// 3- Em 3 vezes no cartão, preço normal de etiqueta sem juros;
+// 4- Em 6 vezes, preço normal de etiqueta mais juros de 10%.
+//  Entrada : Preço normal de etiqueta
+//  Saída   : Valor a ser pago por um produto dependendo do tipo de pagamento
+
+principal
+	// Declarações
+	inteiro condicaoPagamento;
+	real precoEtiqueta, precoPago, parcela;
+	texto opcao1, opcao2, opcao3, opcao4, opcaoPagamento;
+
+	opcao1 = "À vista em dinheiro, com 10% de desconto";
+	opcao2 = "À vista no cartão de crédito, com 5% de desconto";
+	opcao3 = "Em 3 vezes no cartão, preço normal de etiqueta sem juros";
+	opcao4 = "Em 6 vezes, preço normal de etiqueta mais juros de 10%";
+
+	parcela = 0.00;
+
+	// Instruções
+	escreva("Digite o preço de etiqueta do produto, em R$: ");
+	leia(precoEtiqueta);
+
+	limpaTela();
+
+	escreval("[1] ", opcao1);
+	escreval("[2] ", opcao2);
+	escreval("[3] ", opcao3);
+	escreval("[4] ", opcao4);
+
+	escreval("");
+
+	escreva("Escolha uma opção de pagamento: ");
+
+	leia(condicaoPagamento);
+
+	se (condicaoPagamento == 1) entao
+		precoPago = precoEtiqueta * 0.90;
+		opcaoPagamento = opcao1;
+	senao
+		se (condicaoPagamento == 2) entao
+			precoPago = precoEtiqueta * 0.95;
+			opcaoPagamento = opcao2;
+		senao
+			se (condicaoPagamento == 3) entao
+				precoPago = precoEtiqueta;
+				parcela = precoPago / 3;
+				opcaoPagamento = opcao3;
+			senao
+				precoPago = precoEtiqueta * 1.10;
+				parcela = precoPago / 6;
+				opcaoPagamento = opcao4;
+			fimSe
+		fimSe
+	fimSe
+
+    se (parcela != 0.00) entao
+	    escreva("O preço a ser pago pelo produto é R$ ", precoPago::2, ". ", opcaoPagamento, ". Com parcelas de R$ ", parcela::2);
+	senao
+	    escreva("O preço a ser pago pelo produto é R$ ", precoPago::2, ". ", opcaoPagamento, ".");
+	fimSe
+
+fimPrincipal

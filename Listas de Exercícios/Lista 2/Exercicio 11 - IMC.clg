@@ -1,0 +1,48 @@
+algoritmo IMC;
+// Síntese
+//  Objetivo:  Elabore um algoritmo que leia o peso e a altura de um adulto e mostre sua condição de acordo
+//             com a tabela abaixo.
+//             IMC em adultos Condição
+//             Abaixo de 18,5 -Abaixo do peso
+//             Entre 18,5 e 25 -Peso normal
+//             Entre 25 e 30 -Acima do peso
+//             Entre 30 e 40 -obeso
+//             Acima de 40 – Obesidade grave.
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+	real massa, altura, imc;
+
+	// Instruções
+	escreva("Digite sua massa, em quilogramas [kg]: ");
+	leia(massa);
+
+	escreva("Digite sua altura, em metros [m]: ");
+	leia(altura);
+
+	imc = massa / exp(altura, 2);
+
+	escreval("Seu IMC é de ", imc::2);
+
+	se (imc < 18.5) entao
+	    escreva("Abaixo do peso");
+	senao
+	    se (imc >= 18.5 e imc < 25) entao
+	        escreva("Peso normal");
+	    senao
+	        se (imc >= 25 e imc < 30) entao
+	            escreva("Acima do peso");
+	        senao
+	            se (imc >= 30 e imc < 40) entao
+	                escreva("Obeso");
+	            senao
+	                escreva("Obesidade grave");
+	            fimSe
+	        fimSe
+	    fimSe
+	fimSe
+
+fimPrincipal

@@ -1,0 +1,36 @@
+algoritmo NomeMes;
+// Síntese
+//  Objetivo:  Faça um algoritmo que receba o número do mês e mostre o mês correspondente, verificando se o
+//             mês é invalido.
+//  Entrada :  Número correspondente ao mês
+//  Saída   :  Nome do mês
+
+
+principal
+	// Declarações
+	inteiro indiceMes;
+	texto nomeMes[12];
+	
+	nomeMes[0] = "Janeiro";
+	nomeMes[1] = "Fevereiro";
+	nomeMes[2] = "Março";
+	nomeMes[3] = "Abril";
+	nomeMes[4] = "Maio";
+	nomeMes[5] = "Junho";
+	nomeMes[6] = "Julho";
+	nomeMes[7] = "Agosto";
+	nomeMes[8] = "Setembro";
+	nomeMes[9] = "Outubro";
+	nomeMes[10] = "Novembro";
+	nomeMes[11] = "Dezembro";
+	
+	// Instruções
+	escreva("Digite um número entre 0 e 11: ");
+	leia(indiceMes);
+
+	se (indiceMes < 0 e indiceMes > 11) entao
+	    escreva("Escolha um número entre 0 e 11");
+	senao
+	    escreva("O mês referente é ", nomeMes[indiceMes]);
+	fimSe
+fimPrincipal
